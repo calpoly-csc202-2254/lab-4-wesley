@@ -20,28 +20,6 @@ class BinarySearchTree:
     comes_before: Callable[[Any, Any], bool]
     tree: BinTree
 
-import sys
-from typing import *
-from dataclasses import dataclass
-
-sys.setrecursionlimit(10**6)
-
-def example_fun(x : int) -> bool:
-    return x < 142
-
-BinTree: TypeAlias = Union["Node", None]
-
-@dataclass(frozen=True)
-class Node:
-    element: Any
-    left: BinTree
-    right: BinTree
-
-@dataclass(frozen=True)
-class BinarySearchTree:
-    comes_before: Callable[[Any, Any], bool]
-    tree: BinTree
-
 def is_empty(bst: BinarySearchTree) -> bool:
     return bst.tree is None
 
